@@ -57,12 +57,9 @@ class App extends Component {
         Header: props => <span>Friend Age</span>, // Custom header components!
         accessor: 'friend.age'
       }
-  ];
+    ];
   
-    <ReactTable
-      data={data}
-      columns={columns}
-    />
+    return (<ReactTable data={data} columns={columns} />);
   }  
 }
 
