@@ -4,10 +4,6 @@ import './App.css';
 import 'react-table/react-table.css';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   getData() {
     const data = [
       {
