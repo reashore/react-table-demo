@@ -4,13 +4,11 @@ import './App.css';
 import 'react-table/react-table.css';
 
 class App extends Component {
-  // render() {
-  //   return (
-  //     <div className="App">React Table Demo</div>
-  //   );
+  // constructor(props) {
+  //   super(props);
   // }
 
-  render() {
+  getData() {
     const data = [
       {
         name: 'Person1',
@@ -37,7 +35,11 @@ class App extends Component {
         }
       }
     ];
-  
+
+    return data;
+  }
+
+  getColumnConfiguration() {
     const columns = [
       {
         Header: 'Name',
@@ -58,6 +60,13 @@ class App extends Component {
         accessor: 'friend.age'
       }
     ];
+
+    return columns;
+  }
+
+  render() {
+    const data = this.getData();
+    const columns = this.getColumnConfiguration();
   
     return (<ReactTable data={data} columns={columns} />);
   }  
